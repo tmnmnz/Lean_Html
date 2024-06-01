@@ -1,0 +1,85 @@
+<!-- Credit -- Kitichet Ponsud -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respondsive_nav.html</title>
+</head>
+<style>
+    .mobile_nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 768px;
+        padding: 10px;
+        margin: auto;
+        border: solid 2px black;
+        border-radius: 20px;
+        align-items: center;
+    }
+    .logo {
+        width: 75px;
+    }
+    .Menu {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+    .show_menu {
+        display: none;
+        max-width: 768px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: solid 2px black;
+        border-radius: 20px;
+    }
+    .show_menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 24px;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        border-radius: 20px;
+        border: solid 2px black;
+        margin: 10px;
+    }
+    .show_menu a:hover {
+        color: green;
+        border: solid 2px green;
+    }
+</style>
+<body>
+    <div class="mobile_nav">
+        <img class="logo"
+        src="https://lh3.googleusercontent.com/pw/AP1GczNCBEjL_C1syAqCYa4m_pWPD_ijwjcHIL5zzpyxxllHUlpNiCr1JIefBnB3IQmIGYVNzE9Y9gSHBMknMq4Ge-qy9UGzV8GljHx-2kquFe-h7U30SOlh7LO1kelsdbAFAYp8Bc7-thX7a3Jk5l8N0MA1=w500-h500-s-no-gm?authuser=0">
+
+        <img class="Menu" alt="Menu Icon" id ="Menu_Icon"
+        src="https://lh3.googleusercontent.com/pw/AP1GczMRjCY_KRtDvOHTcvesBM14sP2dJyarJXiYUHAzj1qQUyvHehHAunC2eN1DqS_aZTLG5-Q-SqUdM0LIXdEb-dHMVxTp3xWN3UZ77iJiP8FwAn6bjtzur1o6lvUGD4gj4VMaw-ltYR_0uJQ0sKa5-LPM=w500-h500-s-no-gm?authuser=0">
+    </div>
+    <div class="show_menu">
+        <a href="https://aj.ac.th/">หน้าแรก</a>
+        <a href="https://aj.ac.th/Executive">บุคลากร</a>
+        <a href="https://aj.ac.th/contact.html">ติดต่อเรา</a>
+        <a href="https://aj.ac.th/alumni/FirstPage.html">ศิษย์เก่า</a>
+        <a href="">สมัครเรียน</a>
+        <a href="">สำหรับนักเรียน</a>
+    </div>
+    <script>
+        document.querySelector('.Menu').addEventListener('click', function() {
+            var mobileNav = document.querySelector('.show_menu');
+            
+            if (mobileNav.style.display === 'block') {
+                mobileNav.style.display = 'none';
+                Menu_Icon.src = 'https://lh3.googleusercontent.com/pw/AP1GczMRjCY_KRtDvOHTcvesBM14sP2dJyarJXiYUHAzj1qQUyvHehHAunC2eN1DqS_aZTLG5-Q-SqUdM0LIXdEb-dHMVxTp3xWN3UZ77iJiP8FwAn6bjtzur1o6lvUGD4gj4VMaw-ltYR_0uJQ0sKa5-LPM=w500-h500-s-no-gm?authuser=0';
+            } else {
+                mobileNav.style.display = 'block';
+                Menu_Icon.src = 'https://lh3.googleusercontent.com/pw/AP1GczORsrZlnjn40lFBpqANjoZsnIxAaVVaPoeZD0pUfbP4suce5U8NNw1aO254fmXvZjXZqBW14qvxaJpjeZ8hC5tOLyudlz-Dl-rDI21V8tTA0-zaNq77KpRM962S3IJl_ONDAanrI3bwD1BcahNNu2zi=w500-h500-s-no-gm?authuser=0';
+            }
+        });
+    </script>
+</body>
+</html>
